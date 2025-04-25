@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Pedido - Página 3</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #F5F5DC;
+      text-align: center;
+      padding: 50px;
+    }
+    .contador {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    .imagem {
+      max-width: 80%;
+      height: auto;
+    }
+    iframe {
+      width: 0;
+      height: 0;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="contador" id="contador"></div>
+  <img src="imagem3.png" alt="Imagem Central" class="imagem">
+  <iframe src="https://www.youtube.com/embed/PELeEo33JXs?autoplay=1&loop=1&playlist=PELeEo33JXs" allow="autoplay"></iframe>
+
+  <script>
+    const inicio = new Date("2025-03-25T00:00:00");
+    function atualizarContador() {
+      const agora = new Date();
+      const diff = agora - inicio;
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diff / (1000 * 60)) % 60);
+      const segundos = Math.floor((diff / 1000) % 60);
+      document.getElementById("contador").textContent =
+        `Estamos juntos há ${dias} dias, ${horas} horas, ${minutos} minutos e ${segundos} segundos.`;
+    }
+    setInterval(atualizarContador, 1000);
+    atualizarContador();
+  </script>
+</body>
+</html>

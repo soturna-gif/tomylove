@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Pedido - Página 2</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: white;
+      text-align: center;
+      padding: 50px;
+      color: #5A0000;
+    }
+    h1 {
+      font-size: 24px;
+      color: #8B0000;
+    }
+    .subtexto {
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    .botao {
+      background: linear-gradient(to bottom right, #8B0000, #B22222);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      margin: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <h1>Rhea Iphigenea Sideris, depois de dois anos e alguns meses, você aceita namorar comigo?</h1>
+  <p class="subtexto">(Se casar secretamente, isso é um pedido de casamento na verdade, shh ninguém pode saber)</p>
+  <button class="botao" onclick="location.href='pagina3.html'">Sim</button>
+  <button id="nao" class="botao">Não</button>
+
+  <script>
+    const nao = document.getElementById("nao");
+    nao.addEventListener("mouseover", () => {
+      nao.style.position = "absolute";
+      nao.style.top = Math.random() * window.innerHeight + "px";
+      nao.style.left = Math.random() * window.innerWidth + "px";
+    });
+  </script>
+</body>
+</html>
